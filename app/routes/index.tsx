@@ -12,7 +12,7 @@ export default function Index() {
             src="https://avatars.githubusercontent.com/u/14847208?v=4"
           />
           <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
-            <p> Hi, i am vincenteof. </p>
+            <p> Hey, I am vincenteof. </p>
             <p className="my-2">
               I am a <b>frontend developer</b> living in Shanghai.
             </p>
@@ -20,12 +20,12 @@ export default function Index() {
         </div>
         <div className="pl-8">
           <p className="my-6 max-w-2xl">
-            I mainly focus on frontend development, and i also have a strong
+            I mainly focus on frontend development, and I also have a strong
             belief in blockchain technology like <b>ethereum</b>.{" "}
             <NavLink to="about">Read more about me</NavLink>
           </p>
-          <p className="pb-10 mt-6 max-w-2xl">
-            After regularly working in tech companies for about five years, i am
+          <p className="pb-16 mt-6 max-w-2xl">
+            After regularly working in tech companies for about five years, I am
             currently looking for some new way of life, such as being a digital
             nomad, participating in OSS or starting a startup.
           </p>
