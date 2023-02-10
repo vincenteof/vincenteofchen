@@ -8,9 +8,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "./session.server";
+import Header from "~/components/Header";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
@@ -35,8 +35,11 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full">
-        <Outlet />
+      <body className="max-w-3xl mb-40 flex flex-col mx-4 mt-8 lg:mx-auto">
+        <Header />
+        <main className="m-auto">
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
