@@ -18,26 +18,28 @@ export default function Index() {
             </p>
           </div>
         </div>
-        <div className="pl-8">
-          <p className="my-6 max-w-2xl">
+        <div className="pl-8 text-neutral-800 dark:text-neutral-200">
+          <p className="my-6 max-w-2xl ">
             I mainly focus on frontend development, and I also have a strong
             belief in blockchain technology like <b>ethereum</b>.{" "}
-            <NavLink to="about">Read more about me</NavLink>
+            <NavLink to="about" className="underline underline-offset-2">
+              Read more about me
+            </NavLink>
           </p>
-          <p className="pb-16 mt-6 max-w-2xl">
+          <p className="pb-16 pt-6 max-w-2xl">
             After regularly working in tech companies for about five years, I am
             currently looking for some new way of life, such as being a digital
             nomad, participating in OSS or starting a startup.
           </p>
           <hr className="w-20" />
           <div className="pt-4 text-neutral-500">
-            <p className="flex items-center gap-2 ">
+            <p className="flex items-center gap-2">
               Find me on
               <a
                 href="https://github.com/vincenteof"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1 underline underline-offset-2"
+                className="flex items-center gap-1 underline underline-offset-2 text-neutral-800 dark:text-neutral-200"
               >
                 <GithubOutlined />
                 Github
@@ -47,7 +49,7 @@ export default function Index() {
                 href="https://twitter.com/vincenteof"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1 underline underline-offset-2"
+                className="flex items-center gap-1 underline underline-offset-2 text-neutral-800 dark:text-neutral-200"
               >
                 <TwitterOutlined />
                 Twitter
@@ -55,7 +57,10 @@ export default function Index() {
             </p>
             <p>
               Mail me at{" "}
-              <a href="mailto:vincenteofchen@gmail.com" className="underline">
+              <a
+                href="mailto:vincenteofchen@gmail.com"
+                className="underline underline-offset-2 text-neutral-800 dark:text-neutral-200"
+              >
                 vincenteofchen@gmail.com
               </a>
             </p>
