@@ -1,7 +1,7 @@
 import { NavLink } from "@remix-run/react";
 
 function Header() {
-  const nonActiveLinkStyle = "opacity-20 hover:opacity-50";
+  const nonActiveLinkStyle = "opacity-50 hover:opacity-100";
   return (
     <header className="text-center mb-3">
       <h1 className="text-[2.25rem] font-bold pb-2">vincenteof.eth</h1>
