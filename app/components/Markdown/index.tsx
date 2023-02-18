@@ -44,15 +44,15 @@ const MarkdownComponents: Options["components"] = {
       }
     };
 
+    // FIXME: ts as any
     return match ? (
       <SyntaxHighlighter
-        className="codeStyle"
         style={syntaxTheme as any}
         language={match[1]}
+        useInlineStyle
         PreTag="div"
-        showLineNumbers={true}
+        showLineNumbers={false}
         wrapLines={hasMeta ? true : false}
-        useInlineStyles={true}
         lineProps={applyHighlights}
         {...(props as any)}
       />
