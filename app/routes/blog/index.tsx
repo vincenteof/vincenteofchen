@@ -39,7 +39,7 @@ export async function loader() {
 function BlogIndex() {
   const data = useLoaderData<typeof loader>();
   return (
-    <div className="flex h-full min-h-screen flex-col w-[32rem]">
+    <div className="flex h-full flex-col my-4">
       <h2 className="text-xl font-bold">Archive</h2>
       <ul className="mt-4 max-w-2xl">
         {data.posts.map((post) => (

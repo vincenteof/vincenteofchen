@@ -3,30 +3,30 @@ import { GithubOutlined, TwitterOutlined } from "@ant-design/icons";
 
 export default function Index() {
   return (
-    <section>
+    <section className="flex h-full flex-col my-4">
       <article>
-        <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
+        <div className="flex items-center flex-row">
           <img
             className="rounded-full w-[100px] h-[100px]"
             alt="vincenteof"
             src="https://avatars.githubusercontent.com/u/14847208?v=4"
           />
-          <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
+          <div className="mt-0 ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
             <p> Hey, I am vincenteof. </p>
             <p className="my-2">
               I am a <b>frontend developer</b> living in Shanghai.
             </p>
           </div>
         </div>
-        <div className="pl-8 text-neutral-800 dark:text-neutral-200">
-          <p className="my-6 max-w-2xl ">
+        <div className="pl-8 pt-4 text-neutral-800 dark:text-neutral-200">
+          <p className="my-6">
             I mainly focus on frontend development, and I also have a strong
             belief in blockchain technology like <b>ethereum</b>.{" "}
             <NavLink to="about" className="underline underline-offset-2">
               Read more about me
             </NavLink>
           </p>
-          <p className="pb-16 pt-6 max-w-2xl">
+          <p className="pb-16 pt-6">
             After regularly working in tech companies for about five years, I am
             currently looking for some new way of life, such as being a digital
             nomad, participating in OSS or starting a startup.
@@ -65,7 +65,7 @@ export default function Index() {
               </a>
             </p>
           </div>
-          <p className="mt-3 max-w-2xl text-neutral-500">
+          <p className="mt-3 text-neutral-500">
             If you think there are some opportunity we could cooperate with each
             other, please do not hesitate to contact me.
           </p>

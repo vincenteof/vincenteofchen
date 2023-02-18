@@ -35,9 +35,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="max-w-3xl mb-40 flex flex-col mx-4 mt-8 lg:mx-auto">
+      <body className="antialiased max-w-2xl mb-40 flex flex-col mt-4 mx-auto">
         <Header />
-        <main className="m-auto">
+        <main className="flex-auto min-w-0 mt-6 md:mt-0 flex flex-col px-2 md:px-0">
           <Outlet />
         </main>
         <ScrollRestoration />

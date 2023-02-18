@@ -20,9 +20,11 @@ export async function loader({ params }: LoaderArgs) {
 function BlogScreen() {
   const data = useLoaderData<typeof loader>();
   return (
-    <article className="prose px-2 m-auto">
-      <Markdown>{data.body}</Markdown>
-    </article>
+    <div className="flex flex-col h-full my-4">
+      <article className="prose h-full mx-auto">
+        <Markdown>{data.body}</Markdown>
+      </article>
+    </div>
   );
 }
 
