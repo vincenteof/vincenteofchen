@@ -49,9 +49,9 @@ const MarkdownComponents: Options["components"] = {
       <SyntaxHighlighter
         style={syntaxTheme as any}
         language={match[1]}
-        useInlineStyle
+        showLineNumbers={true}
+        useInlineStyles={true}
         PreTag="div"
-        showLineNumbers={false}
         wrapLines={hasMeta ? true : false}
         lineProps={applyHighlights}
         {...(props as any)}
