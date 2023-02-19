@@ -40,7 +40,7 @@ function BlogIndex() {
   const data = useLoaderData<typeof loader>();
   return (
     <div className="flex h-full flex-col my-4">
-      <h2 className="text-xl font-bold">Archive</h2>
+      <h2 className="text-xl font-medium">Archive</h2>
       <ul className="mt-4 max-w-2xl">
         {data.posts.map((post) => (
           <NavLink
