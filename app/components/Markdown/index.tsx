@@ -2,7 +2,7 @@ import ReactMarkdown from "react-markdown";
 import type { Options } from "react-markdown";
 import rangeParser from "parse-numeric-range";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
 import typescript from "react-syntax-highlighter/dist/cjs/languages/prism/typescript";
 import scss from "react-syntax-highlighter/dist/cjs/languages/prism/scss";
@@ -21,7 +21,7 @@ type MarkdownProps = {
   children: string;
 };
 
-const syntaxTheme = oneDark;
+const syntaxTheme = atomDark;
 const MarkdownComponents: Options["components"] = {
   code({ node, inline, className, ...props }) {
     const match = /language-(\w+)/.exec(className || "");
