@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro'
 import TwitterIcon from '../components/icons/Twitter.astro'
 import GithubIcon from '../components/icons/Github.astro'
@@ -8,12 +9,12 @@ import GithubIcon from '../components/icons/Github.astro'
   <section class="flex h-full flex-col my-4">
     <article>
       <div class="flex items-center flex-row">
-        <img
+        <Image
           width={100}
           height={100}
           class="rounded-full"
           alt="vincenteof"
-          src="https://avatars.githubusercontent.com/u/14847208?v=4"
+          src="/me.jpeg"
         />
         <div class="mt-0 ml-6 space-y-2 text-neutral-500">
           <p>Hey, I am vincenteof.</p>

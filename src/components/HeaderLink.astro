@@ -1,0 +1,16 @@
+---
+type Props = astroHTML.JSX.AnchorHTMLAttributes
+const { ['class']: className, href, ...restProps } = Astro.props
+const pathname = new URL(Astro.request.url).pathname
+const isActive = href === pathname
+---
+
+<a
+  {...restProps}
+  href={href}
+  class:list={[
+    className,
+    'hover:opacity-100',
+    isActive ? 'opacity-100' : 'opacity-50',
+  ]}><slot /></a
+>

@@ -1,5 +1,8 @@
 ---
-interface Props {}
+interface Props {
+  style?: string | Record<string, any> | null 
+}
+const { style } = Astro.props
 ---
 
 <svg
@@ -7,6 +10,7 @@ interface Props {}
   width="1em"
   height="1em"
   viewBox="0 0 24 24"
+  style={style}
 >
   <path
     fill="none"
