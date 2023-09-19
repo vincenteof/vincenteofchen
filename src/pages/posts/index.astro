@@ -1,0 +1,36 @@
+---
+import dayjs from 'dayjs'
+import { getCollection } from 'astro:content'
+import NavLink from '../../components/NavLink.astro'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+interface Frontmatter {
+  title: string
+  slug: string
+  date: string
+  description?: string
+}
+const posts = await getCollection('blog')
+---
+
+<BaseLayout title="vincenteof.eth" description="vincenteof's portfolio">
+  <div class="flex h-full flex-col my-4">
+    <h2 class="text-xl font-medium">Archive</h2>
+    <ul class="mt-4 max-w-2xl">
+      {
+        posts.map((post) => {
+          const slug = post.slug
+          const date = dayjs(post.data.date).format('MMM D, YYYY')
+          const title = post.data.title
+          return (
+            <NavLink href={`/posts/${slug}`} class="block max-w-2xl mt-2 mb-6">
+              <li class="flex gap-2 items-center">
+                <div class="opacity-80 hover:opacity-100">{title}</div>
+                <div class="opacity-60 text-sm">{date}</div>
+              </li>
+            </NavLink>
+          )
+        })
+      }
+    </ul>
+  </div>
+</BaseLayout>
