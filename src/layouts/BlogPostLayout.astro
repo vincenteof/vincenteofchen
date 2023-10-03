@@ -1,12 +1,10 @@
 ---
-import Header from '../components/Header.astro'
 interface Props {
   title?: string
   description?: string
 }
 
-const { title = 'vincenteof.eth', description = "vincenteof's portfolio" } =
-  Astro.props
+const { title, description } = Astro.props
 ---
 
 <!doctype html>
@@ -20,7 +18,11 @@ const { title = 'vincenteof.eth', description = "vincenteof's portfolio" } =
     <title>{title}</title>
   </head>
   <body class="antialiased max-w-2xl mb-40 flex flex-col mt-4 mx-auto">
-    <Header />
-    <slot />
+    <main>
+      <article class="prose">
+        <h1>{title}</h1>
+        <slot />
+      </article>
+    </main>
   </body>
 </html>

@@ -12,14 +12,14 @@ interface Frontmatter {
 const posts = await getCollection('blog')
 ---
 
-<BaseLayout title="vincenteof.eth" description="vincenteof's portfolio">
+<BaseLayout>
   <div class="flex h-full flex-col my-4">
     <h2 class="text-xl font-medium">Archive</h2>
     <ul class="mt-4 max-w-2xl">
       {
         posts.map((post) => {
           const slug = post.slug
-          const date = dayjs(post.data.date).format('MMM D, YYYY')
+          const date = dayjs(post.data.pubDate).format('MMM D, YYYY')
           const title = post.data.title
           return (
             <NavLink href={`/posts/${slug}`} class="block max-w-2xl mt-2 mb-6">
