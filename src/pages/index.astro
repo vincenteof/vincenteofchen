@@ -3,7 +3,7 @@ import { Image } from 'astro:assets'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import TwitterIcon from '../components/icons/Twitter.astro'
 import GithubIcon from '../components/icons/Github.astro'
-import Link from '../components/Link.astro';
+import Link from '../components/Link.astro'
 ---
 
 <BaseLayout>
@@ -18,28 +18,34 @@ import Link from '../components/Link.astro';
           src="/me.jpeg"
         />
         <div class="mt-0 ml-6 space-y-2">
-          <p class="prose prose-neutral dark:prose-invert">Hey, I am vincenteof.</p>
+          <p class="prose prose-neutral dark:prose-invert">
+            Hey, I am vincenteof.
+          </p>
           <p class="prose prose-neutral dark:prose-invert my-2">
-            I am a <span class="font-bold">frontend developer</span> living in Shanghai.
+            A passionate <span class="font-bold">frontend developer</span> based
+            in Shanghai.
           </p>
         </div>
       </div>
       <div class="pt-4">
         <p class="prose prose-neutral dark:prose-invert px-2 sm:px-4 my-6">
-          I mainly focus on frontend development, and I also have a strong
+          I mainly focus on frontend development, and I also hold a strong
           belief in blockchain technology like <b>ethereum</b>.{' '}
-          <Link href="/about" underline>
-            Read more about me
-          </Link>
+          <Link href="/about" underline>Read more about me</Link>
         </p>
-        <p class="prose prose-neutral dark:prose-invert px-2 sm:px-4 pb-16 pt-6">
-          After regularly working in tech companies for about five years, I am
-          currently looking for some new way of life, such as being a digital
-          nomad, participating in OSS or starting a startup.
+        <p
+          class="prose prose-neutral dark:prose-invert px-2 sm:px-4 pb-16 pt-6"
+        >
+          Currently, I'm exploring new life paths beyond the traditional tech
+          company setting. These include embracing the digital nomad lifestyle,
+          contributing to Open Source Software (OSS) projects, and considering
+          the thrilling venture of starting a startup.
         </p>
         <hr class="w-20" />
         <div class="py-6">
-          <p class="prose prose-neutral dark:prose-invert flex items-center gap-2">
+          <p
+            class="prose prose-neutral dark:prose-invert flex items-center gap-2"
+          >
             Find me on
             <Link
               href="https://github.com/vincenteof"
@@ -65,17 +71,15 @@ import Link from '../components/Link.astro';
           </p>
           <p class="prose prose-neutral dark:prose-invert">
             Mail me at{' '}
-            <Link
-              href="mailto:vincenteofchen@gmail.com"
-              underline
-            >
+            <Link href="mailto:vincenteofchen@gmail.com" underline>
               vincenteofchen@gmail.com
             </Link>
           </p>
         </div>
         <p class="prose prose-neutral dark:prose-invert">
-          If you think there are some opportunity we could cooperate with each
-          other, please do not hesitate to contact me.
+          If you see any opportunities for collaboration or believe we could
+          work together in a meaningful way, please don't hesitate to reach out
+          and contact me.
         </p>
       </div>
     </article>
