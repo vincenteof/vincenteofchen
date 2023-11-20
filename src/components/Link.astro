@@ -1,0 +1,15 @@
+---
+type Props = astroHTML.JSX.AnchorHTMLAttributes & { underline?: boolean } 
+
+const { ['class']: className, href, underline, ...restProps } = Astro.props
+---
+
+<a
+  {...restProps}
+  href={href}
+  class:list={[
+    className,
+    underline && 'underline underline-offset-2',
+    'hover:text-neutral-800 dark:hover:text-neutral-100 transition-all not-prose',
+  ]}><slot /></a
+>

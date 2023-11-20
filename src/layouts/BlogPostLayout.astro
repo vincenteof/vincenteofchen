@@ -17,9 +17,9 @@ const { title, description } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="antialiased font-sans max-w-2xl mx-auto mt-4 mb-20 px-6 md:px-8 flex flex-col text-gray-700 dark:text-gray-200 bg-white dark:bg-[#111010]">
+  <body class="antialiased font-sans max-w-2xl mx-auto mt-4 mb-10 px-6 md:px-8 flex flex-col text-black dark:text-white bg-white dark:bg-[#111010]">
     <main>
-      <article class="prose dark:prose-invert">
+      <article class="prose prose-neutral dark:prose-invert">
         <h1>{title}</h1>
         <slot />
       </article>
