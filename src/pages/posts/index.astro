@@ -3,12 +3,6 @@ import dayjs from 'dayjs'
 import { getCollection } from 'astro:content'
 import NavLink from '../../components/NavLink.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-interface Frontmatter {
-  title: string
-  slug: string
-  date: string
-  description?: string
-}
 const posts = await getCollection('blog')
 ---
 
