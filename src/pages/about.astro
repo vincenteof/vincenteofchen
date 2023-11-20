@@ -3,20 +3,21 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import TwitterIcon from '../components/icons/Twitter.astro'
 import GithubIcon from '../components/icons/Github.astro'
 import EmailIcon from '../components/icons/Email.astro'
+import Link from '../components/Link.astro';
 ---
 
 <BaseLayout>
-  <div class="flex h-full flex-col mt-4 gap-8">
+  <div class="prose prose-neutral dark:prose-invert flex h-full flex-col mt-4">
     <div>
-      <h2 class="text-xl font-medium mb-4">About Me</h2>
-      <div class="flex flex-col gap-4">
-        <p class="text-neutral-800">
-          Hey, I am <b>vincenteof</b>. I am a software engineer living in
+      <h2 class="text-xl font-medium">About Me</h2>
+      <div class="flex flex-col">
+        <p>
+          Hey, I am <span class="font-bold">vincenteof</span>. I am a software engineer living in
           Shanghai and I mainly focus on frontend development. Comparing to
           introducing myself in a systematic way, I prefer to giving several
           bullet point.
         </p>
-        <ul class="text-neutral-800 list-disc list-inside">
+        <ul class="list-disc list-inside">
           <li>I am married and have a cute baby.</li>
           <li>
             I work as a software engineer for about five years, and I switch
@@ -24,60 +25,65 @@ import EmailIcon from '../components/icons/Email.astro'
           </li>
           <li>
             My tech stack:
-            <a
+            <Link
               href="https://reactjs.org/"
               target="_blank"
               rel="noreferrer"
-              class="underline underline-offset-2 px-1"
+              class="px-1"
+              underline
             >
               React
-            </a>
+            </Link>
              ,
-            <a
+            <Link
               href="https://astro.build/"
               target="_blank"
               rel="noreferrer"
-              class="underline underline-offset-2 px-1"
+              class="px-1"
+              underline
             >
               Astro
-            </a>
+            </Link>
              ,
-            <a
-              href="https://remix.run/"
+            <Link
+              href="https://nextjs.org/"
               target="_blank"
               rel="noreferrer"
-              class="underline underline-offset-2 px-1"
+              class="px-1"
+              underline
             >
-              Remix
-            </a>,
-            <a
+              Next.js
+            </Link>,
+            <Link
               href="https://nodejs.org/en/"
               target="_blank"
               rel="noreferrer"
-              class="underline underline-offset-2 px-1"
+              class="px-1"
             >
               Node.js
-            </a>
+            </Link>
              ,
-            <a
+            <Link
               href="https://www.typescriptlang.org/"
               target="_blank"
               rel="noreferrer"
-              class="underline underline-offset-2 px-1"
+              class="px-1"
+              underline
             >
               Typescript
-            </a>
+            </Link>
           </li>
           <li>
             I believe in
-            <a
+            <Link
               href="https://twitter.com/ProfFeynman/status/1054763640220467201"
               target="_blank"
               rel="noreferrer"
-              class="underline underline-offset-2 px-1"
+              class="px-1"
+              underline
             >
               what Feynman said
-            </a>
+            </Link>
              , so reverse engineering is a learning method I often use.
           </li>
           <li>
@@ -86,7 +92,7 @@ import EmailIcon from '../components/icons/Email.astro'
             education should exist in a more decentralized form.
           </li>
           <li>
-            I am an <b>ETH(ethereum)</b> holder. I have a strong belief in
+            I am an <span class="font-bold">ETH(ethereum)</span> holder. I have a strong belief in
             blockchain technology and I am very willing to contribute to the
             system.
           </li>
@@ -94,66 +100,68 @@ import EmailIcon from '../components/icons/Email.astro'
       </div>
     </div>
     <div>
-      <h2 class="text-xl font-medium mb-4">About This Site</h2>
-      <p class="text-neutral-800">
+      <h2 class="text-xl font-medium">About This Site</h2>
+      <p>
         This site is powered by
-        <a
+        <Link
           href="https://astro.build/"
           target="_blank"
           rel="noreferrer"
-          class="underline underline-offset-2 px-1"
+          class="px-1"
+          underline
         >
           Astro
-        </a>
+        </Link>
          and is under active iteration. Currently, I primarily use this site for
         writing and recording. If you have any opinion or suggestion,
-        <a
+        <Link
           href="https://github.com/vincenteof/vincenteofchen"
           target="_blank"
           rel="noreferrer"
-          class="underline underline-offset-2 px-1"
+          class="px-1"
+          underline
         >
           feedback is welcome
-        </a>
+        </Link>
          .
       </p>
     </div>
     <div>
-      <h2 class="text-xl font-medium mb-4">Contact</h2>
+      <h2 class="text-xl font-medium">Contact</h2>
       <div class="flex flex-row gap-2">
-        <a
+        <Link
           href="https://github.com/vincenteof"
           target="_blank"
           rel="noreferrer"
-          class="flex w-full border border-neutral-200 rounded-lg p-4 no-underline items-center text-neutral-800 hover:bg-neutral-100 transition-all justify-between"
+          class="flex w-full border border-neutral-200 dark:border-neutral-700 rounded-lg p-4 no-underline items-center hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all justify-between"
         >
           <div class="flex items-center">
             <GithubIcon style={{ fontSize: '1.125rem' }} />
             <div class="ml-3">GitHub</div>
           </div>
-        </a>
-        <a
+        </Link>
+        <Link
           href="https://twitter.com/vincenteof"
           target="_blank"
           rel="noreferrer"
-          class="flex w-full border border-neutral-200 rounded-lg p-4 no-underline items-center text-neutral-800 hover:bg-neutral-100 transition-all justify-between"
+          class="flex w-full border border-neutral-200 dark:border-neutral-700 rounded-lg p-4 no-underline items-center hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all justify-between"
         >
           <div class="flex items-center">
             <TwitterIcon style={{ fontSize: '1.125rem' }} />
             <div class="ml-3">Twitter</div>
           </div>
-        </a>
-        <a
+        </Link>
+        <Link
           href="mailto:vincenteofchen@gmail.com"
           target="_blank"
           rel="noreferrer"
-          class="flex w-full border border-neutral-200 rounded-lg p-4 no-underline items-center text-neutral-800 hover:bg-neutral-100 transition-all justify-between"
+          class="flex w-full border border-neutral-200 dark:border-neutral-700 rounded-lg p-4 no-underline items-center hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all justify-between"
         >
           <div class="flex items-center">
             <EmailIcon style={{ fontSize: '1.125rem' }} />
             <div class="ml-3">Email</div>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   </div>
