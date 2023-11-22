@@ -16,10 +16,14 @@ const posts = await getCollection('blog')
           const date = dayjs(post.data.pubDate).format('MMM D, YYYY')
           const title = post.data.title
           return (
-            <a href={`/posts/${slug}`} class="block max-w-2xl mt-2 mb-6">
+            <a href={`/posts/${slug}`} class="block max-w-2xl mt-2 mb-6 group">
               <li class="flex gap-2 items-center">
-                <div class="opacity-60">{title}</div>
-                <div class="opacity-40 text-sm">{date}</div>
+                <div class="opacity-60 group-hover:opacity-80 transition-opacity duration-150">
+                  {title}
+                </div>
+                <div class="opacity-40 text-sm group-hover:opacity-60 transition-opacity duration-150">
+                  {date}
+                </div>
               </li>
             </a>
           )
