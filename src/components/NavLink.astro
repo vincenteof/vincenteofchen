@@ -3,6 +3,9 @@ type Props = astroHTML.JSX.AnchorHTMLAttributes
 const { ['class']: className, href, ...restProps } = Astro.props
 const pathname = new URL(Astro.request.url).pathname
 const isActive = href === pathname
+console.log('Astro.request.url: ', Astro.request.url)
+console.log('pathname: ', pathname)
+console.log('href: ', href)
 ---
 
 <a
