@@ -1,8 +1,17 @@
 ---
 type Props = astroHTML.JSX.AnchorHTMLAttributes
 const { ['class']: className, href, ...restProps } = Astro.props
-const pathname = new URL(Astro.request.url).pathname
-const isActive = href === pathname
+// normalization for `/path/` and `/path`
+const pathname = new URL(Astro.request.url).pathname.replace(/\/$/, '')
+let hrefString
+if (href instanceof URL) {
+  hrefString = href.pathname.replace(/\/$/, '')
+} else if (typeof href === 'string') {
+  hrefString = href.replace(/\/$/, '')
+} else {
+  hrefString = '' 
+}
+const isActive = hrefString === pathname
 ---
 
 <a
