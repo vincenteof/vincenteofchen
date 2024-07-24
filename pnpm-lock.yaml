@@ -17,8 +17,11 @@ importers:
       dayjs:
         specifier: ^1.11.9
         version: 1.11.9
+      es-toolkit:
+        specifier: ^1.13.1
+        version: 1.13.1
       tailwindcss:
-        specifier: ^3.0.24
+        specifier: ^3.3.3
         version: 3.3.3
     devDependencies:
       '@tailwindcss/typography':
@@ -697,9 +700,6 @@ packages:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
 
-  caniuse-lite@1.0.30001532:
-    resolution: {integrity: sha512-FbDFnNat3nMnrROzqrsg314zhqN5LGQ1kyyMk2opcrwGbVGpHRhgCWtAgD5YJUqNAiQ+dklreil/c3Qf1dfCTw==}
-
   caniuse-lite@1.0.30001643:
     resolution: {integrity: sha512-ERgWGNleEilSrHM6iUz/zJNSQTP8Mr21wDWpdgvRwcTXGAq6jMtOUPP4dqFPTdKqZ2wKTdtB+uucZ3MRpAUSmg==}
 
@@ -871,6 +871,9 @@ packages:
 
   es-module-lexer@1.5.4:
     resolution: {integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==}
+
+  es-toolkit@1.13.1:
+    resolution: {integrity: sha512-tGsgoI8DfU0yrZI7w97aYVMZJU5sjpXC+HK8aYf3pmLQRNHMleiJN5ud21dA/IHKkTDFY5jcDMQcLs0A21LtAg==}
 
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
@@ -2569,7 +2572,7 @@ snapshots:
   autoprefixer@10.4.15(postcss@8.4.29):
     dependencies:
       browserslist: 4.21.10
-      caniuse-lite: 1.0.30001532
+      caniuse-lite: 1.0.30001643
       fraction.js: 4.3.6
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -2608,7 +2611,7 @@ snapshots:
 
   browserslist@4.21.10:
     dependencies:
-      caniuse-lite: 1.0.30001532
+      caniuse-lite: 1.0.30001643
       electron-to-chromium: 1.4.513
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
@@ -2623,8 +2626,6 @@ snapshots:
   camelcase-css@2.0.1: {}
 
   camelcase@7.0.1: {}
-
-  caniuse-lite@1.0.30001532: {}
 
   caniuse-lite@1.0.30001643: {}
 
@@ -2774,6 +2775,8 @@ snapshots:
   entities@4.5.0: {}
 
   es-module-lexer@1.5.4: {}
+
+  es-toolkit@1.13.1: {}
 
   esbuild@0.21.5:
     optionalDependencies:
