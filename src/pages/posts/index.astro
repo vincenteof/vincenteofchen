@@ -1,18 +1,28 @@
 ---
 import dayjs from 'dayjs'
 import { getCollection } from 'astro:content'
-import NavLink from '../../components/NavLink.astro'
+import { groupBy } from 'es-toolkit'
 import BaseLayout from '../../layouts/BaseLayout.astro'
+
 const posts = await getCollection('blog')
+const groupedPosts = groupBy(posts, (post) => {
+  const slug = post.slug
+  return slug.endsWith('-zh') ? slug.slice(0, -3) : slug
+})
+
 ---
 
-<BaseLayout title='Posts | vincenteof.eth' description='All my trival thoughts'>
+<BaseLayout title="Posts | vincenteof.eth" description="All my trival thoughts">
   <div class="flex h-full flex-col my-4">
     <h2 class="text-xl font-medium">Archive</h2>
     <ul class="mt-4 max-w-2xl">
       {
-        posts.map((post) => {
-          const slug = post.slug
+        Object.keys(groupedPosts).map((slug) => {
+          const postsWithDiffrentLang = groupedPosts[slug]
+          const post = postsWithDiffrentLang.find((x) => x.slug === slug)
+          if (!post) {
+            throw new Error(`No macthed post for "${slug}"`)
+          }
           const date = dayjs(post.data.pubDate).format('MMM D, YYYY')
           const title = post.data.title
           return (

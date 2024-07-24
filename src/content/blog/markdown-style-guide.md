@@ -4,6 +4,8 @@ description: 'Here is a sample of some basic Markdown syntax that can be used wh
 pubDate: 'Jul 01 2022'
 ---
 
+> [中文翻译 Chinese Version](/posts/markdown-style-guide-zh)
+
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
 ## Headings
