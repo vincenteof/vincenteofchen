@@ -19,14 +19,16 @@ const groupedPosts = groupBy(posts, (post) => {
       {
         Object.keys(groupedPosts).map((slug) => {
           const postsWithDiffrentLang = groupedPosts[slug]
-          const post = postsWithDiffrentLang.find((x) => x.slug === slug)
-          if (!post) {
+          const postForEn = postsWithDiffrentLang.find((x) => x.slug === slug)
+          const postForZh = postsWithDiffrentLang.find((x) => x.slug === `${slug}-zh`) 
+          const targetPost = postForEn ?? postForZh
+          if (!targetPost) {
             throw new Error(`No macthed post for "${slug}"`)
           }
-          const date = dayjs(post.data.pubDate).format('MMM D, YYYY')
-          const title = post.data.title
+          const date = dayjs(targetPost.data.pubDate).format('MMM D, YYYY')
+          const title = targetPost.data.title
           return (
-            <a href={`/posts/${slug}`} class="block max-w-2xl mt-2 mb-6 group">
+            <a href={`/posts/${targetPost.slug}`} class="block max-w-2xl mt-2 mb-6 group">
               <li class="flex gap-2 items-center">
                 <div class="opacity-60 group-hover:opacity-80 transition-opacity duration-150">
                   {title}
